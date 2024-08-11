@@ -1,4 +1,5 @@
 // learn string all method because it is very useful in web dev. 
+// jvceirjcnirnc
 
 
 const name = "ajay"
