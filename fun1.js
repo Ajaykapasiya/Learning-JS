@@ -17,7 +17,7 @@ function addTwoNum(number1 , number2 ){
 
 }
 
-addTwoNum(3,3)
+addTwoNum(3,33)
 
 
 
@@ -30,9 +30,10 @@ function addNum(num1 , num2)
 //ex
 console.log("ajay");
 
+
 }
 
-const result = addNum(2,3)
+const result = addNum(2,32)
 
 console.log("results: " , result);
 
