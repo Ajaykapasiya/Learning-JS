@@ -52,3 +52,20 @@ for (const key in object1) {
    
         
     }
+
+const coding = ["js" , "rb " , "cpp" , "java"]
+
+
+coding .forEach( (item) => {
+  console.log(item);
+  
+} )
+
+
+coding .forEach( (item , index , arr) => {
+    console.log(item , index , arr);
+    
+  } )
+  
+  
+
