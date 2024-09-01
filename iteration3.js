@@ -28,3 +28,27 @@ map.set('USA',"United states of america")
 
 console.log(map);
 
+
+for (const [key , value] of map) {
+    
+    console.log(key,`=>`,value);
+    
+}
+
+// map are iterable , object are not.
+// map are used for of loop and object used to iterate for in loop
+
+const object1 = {
+    js: 'java script',
+    cpp: 'c++',
+    rb: 'ruby',
+    swift: 'swift for ios'
+
+}
+
+
+for (const key in object1) {
+   console.log(object1[key]);
+   
+        
+    }
