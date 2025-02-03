@@ -12,6 +12,8 @@ form.addEventListener("submit", function (e) {
     results.innerHTML = "Please give a valid weight";
   }
   else{
-    (weight/((height*height)/10000)).toFixed(2)
+   const bmi =  (weight/((height*height)/10000)).toFixed(2)
+   console.log(bmi);
+   
   }
 });
