@@ -13,5 +13,29 @@ const p = document.createElement('p')
 
 let prevGuess = [];
 let numGuess = 1;
-
 let playgame = true;
+
+function validateGuess(guess){
+
+}
+
+function checkGuess(guess){
+
+}
+
+function displayGuess(guess){
+
+}
+
+function displayMessage(message){
+
+}
+
+
+function endGame (){
+
+}
+
+function newGame (){
+    
+}
