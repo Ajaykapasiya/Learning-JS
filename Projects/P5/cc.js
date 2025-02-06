@@ -14,13 +14,16 @@ console.log(randomColor());
 
 let intervalId;
 const startChangeColor = function () {
-     intervalId = setInterval(changeBgColor , 1000)
+if(!intervalId){
+    intervalId = setInterval(changeBgColor , 1000)
 
+}
    function changeBgColor (){ document.body.style.backgroundColor = randomColor()};
 };
 
 const stopChangeColor = function () {
     clearInterval(intervalId)
+    intervalId = null;
 };
 
 

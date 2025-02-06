@@ -7,8 +7,8 @@
   </head>
   <body>
     <h1>Chai and javascrpt</h1>
-    <button id="stop">Stop</button>
     <button id="Start">Start</button>
+    <button id="stop">Stop</button>
   </body>
   <script>
     const sayDate = function (str) {
@@ -17,12 +17,16 @@
 
     let vaR;
     document.querySelector("#Start").addEventListener("click", function () {
-       vaR = setInterval(sayDate, 1000, "Hii");
+if (!vaR) {
+  vaR = setInterval(sayDate, 1000, "Hii");
+
+}
       console.log("Start");
     });
 
     document.querySelector("#stop").addEventListener("click", function () {
       clearInterval(vaR);
+      vaR = null;
       console.log("Stopped");
     });
   </script>
