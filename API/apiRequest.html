@@ -6,19 +6,44 @@
     <title>Document</title>
   </head>
   <body>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        max-width: 300px;
+        margin: 20px auto;
+        text-align: center;
+        background-color: #f9f9f9;
+        display: none;
+      }
+    </style>
+    <button id="fetch-button">Fetch User Data</button>
+    <div id="user-card" class="card"></div>
+    
     <script>
-      const requestUrl = "https://api.github.com/users/Ajaykapasiya";
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", requestUrl);
-      xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-          const data = JSON.parse(this.responseText);
-          console.log(typeof data);
-          console.log(data.name);
-        }
-      };
-      xhr.send();
+        
+    document.getElementById('fetch-button').addEventListener('click', function
+    () {
+        const requestUrl = "https://api.github.com/users/Ajaykapasiya";
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", requestUrl);
+        xhr.onreadystatechange = function () {
+          console.log(xhr.readyState);
+          if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText);
+
+            const userCard = document.getElementById('user-card')
+            userCard.innerHTML =
+            `<h2>${data.name}</h2>
+            <p><strong>ID:</strong>${data.id}</p>
+            <hp><strong>Followers: </strong>${data.followers}</p>
+            `
+            userCard.style.display = 'block';
+          }
+        };
+        xhr.send();
+    });
     </script>
   </body>
 </html>
