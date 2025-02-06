@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Chai and javascrpt </h1>
-    <button id="stop"> Stop </button>
-    <button id="Start"> Start</button>
-</body>
+  </head>
+  <body>
+    <h1>Chai and javascrpt</h1>
+    <button id="stop">Stop</button>
+    <button id="Start">Start</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let vaR;
+    document.querySelector("#Start").addEventListener("click", function () {
+       vaR = setInterval(sayDate, 1000, "Hii");
+      console.log("Start");
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(vaR);
+      console.log("Stopped");
+    });
+  </script>
 </html>
