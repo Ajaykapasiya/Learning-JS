@@ -40,6 +40,8 @@
             <hp><strong>Followers: </strong>${data.followers}</p>
             `
             userCard.style.display = 'block';
+            document.getElementById('fetch-button').style.display = 'none'; // Hide the button
+
           }
         };
         xhr.send();
