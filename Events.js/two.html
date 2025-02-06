@@ -20,6 +20,13 @@
     .innerHTML = "best JS series"
     }
 
-    setTimeout(changeText , 2000)
+    const chageMe = setTimeout(changeText , 2000)
+
+    document.querySelector('#stop').addEventListener('click' , function()
+    {
+         clearTimeout(chageMe)
+         console.log("Stoped");
+         
+    })
   </script>
 </html>
