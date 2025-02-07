@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const promises = new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("Promise is done");
@@ -80,3 +82,12 @@ console.log(error);
    }
   }
    consumepromiseFive ();
+
+   fetch('https://api.github.com/users/Ajaykapasiya')
+   .then((response) => {
+    return response.json ()
+   })
+   .then((data) => {
+    console.log(data);
+   })
+.catch ((error) => console.log(error))
