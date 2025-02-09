@@ -91,3 +91,18 @@ console.log(error);
     console.log(data);
    })
 .catch ((error) => console.log(error))
+
+
+// Added code starts here
+async function fetchAdditionalData() {
+  try {
+    const response = await fetch('https://api.github.com/users/octocat');
+    const data = await response.json();
+    console.log('Additional Data:', data);
+  } catch (error) {
+    console.log('Error fetching additional data:', error);
+  }
+}
+
+fetchAdditionalData();
+// Added code ends here
