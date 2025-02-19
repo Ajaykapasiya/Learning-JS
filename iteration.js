@@ -5,6 +5,16 @@ for (let i = 0; i <= 10; i++) {
     console.log(element);
 }
 
+for (let i = 0; i <= 10; i++) {
+    const element = i;
+    console.log(`The loop start : ${i}`);
+
+    for (let j = 0; j <= 10; j++) {
+        const element = j;
+
+        console.log(`The inner loop is ${j} and outer loop is ${i }`);   
+    }   
+}
 
 
 
