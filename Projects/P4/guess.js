@@ -80,14 +80,4 @@ function newGame() {
   const gameNewButton = document.querySelector("#newGame");
   gameNewButton.addEventListener("click", function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
-    prevGuess = [];
-    numGuess = 1;
-    guessSlot.innerHTML = '';
-    remaining.innerHTML = `${11 - numGuess}`;
-    userInput.removeAttribute('disabled')
-    startOver.removeChild(p);
-
-
-    playGame = true;
-  });
-}
+    p
